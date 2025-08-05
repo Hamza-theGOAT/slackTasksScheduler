@@ -9,9 +9,9 @@ import PIL.Image
 
 def getCredz():
     load_dotenv()
-    botToken = os.getenv('botToken')
+    userToken = os.getenv('userToken')
     # print(f"Bot Token fetched from .env: {botToken}")
-    client = WebClient(token=botToken)
+    client = WebClient(token=userToken)
 
     with open('tasks.json', 'r') as j:
         tasks = json.load(j)
